@@ -1,0 +1,30 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-language" content="pt">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="audioApi.js"></script>
+    <script>
+        var fileUrl = "http://web.cdn.superplayer.fm/sound/turn-on.mp3";
+
+        function playAsApi() {
+            var audio = new AudioApi();
+            audio.src = fileUrl;
+            audio.play();
+        }
+
+        function playAsElement() {
+            var audio = new Audio();
+            audio.src = fileUrl;
+            audio.play();
+        };
+    </script>
+
+    <button onclick=" playAsApi() ">Play Api</button>
+    <button onclick=" playAsElement() ">Play Element</button>
+</body>
+</html>
